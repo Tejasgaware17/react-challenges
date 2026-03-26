@@ -11,7 +11,7 @@ Practical React exercises and challenges:
 1. **LiveSearch:** [View code](./src/challenges/LiveSearch) | [Details](./src/challenges/LiveSearch/CHALLENGE.md) ~
    _Real-time API filtering._
 
-2. **Accordian:** [View code](./src/challenges/Accordion) | [Details](./src/challenges/Accordion/CHALLENGE.md) ~
+2. **Accordion:** [View code](./src/challenges/Accordion) | [Details](./src/challenges/Accordion/CHALLENGE.md) ~
    _Features Single vs. Multi-open modes._
 
 ---
