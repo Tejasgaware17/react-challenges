@@ -8,6 +8,9 @@ Practice lab for React logic, interview challenges, and clean UI patterns.
 
 Practical React exercises and challenges:
 
+1. **LiveSearch:** [View code](./src/challenges/LiveSearch) | [Details](./src/challenges/LiveSearch/CHALLENGE.md) ~
+   _Real-time API filtering._
+
 ---
 
 ## Tech Stack
