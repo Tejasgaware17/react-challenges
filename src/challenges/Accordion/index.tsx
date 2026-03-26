@@ -21,35 +21,44 @@ const data: AccordionItem[] = [
   },
 ]
 
-export default function Accordian() {
-  const [activeId, setActiveId] = useState<number | null>(null)
+export default function Accordian({ multi = false }: { multi?: boolean }) {
+  const [openIds, setOpenIds] = useState<number[]>([])
 
-  const toggle = (id: number) => {
-    setActiveId(activeId === id ? null : id)
+  function toggle(id: number) {
+    if (multi) {
+      setOpenIds(prev => (prev.includes(id) ? prev.filter(i => i !== id) : [...prev, id]))
+    } else {
+      setOpenIds(prev => (prev.includes(id) ? [] : [id]))
+    }
   }
 
   return (
     <div className="accordion-wrapper">
-      <h2 className="accordion-title">Accordion menu</h2>
-      <div className="accordion-list">
-        {data.map(item => (
-          <div key={item.id} className="accordion-item">
-            <button
-              className={`accordion-header ${activeId === item.id ? 'active' : ''}`}
-              onClick={() => toggle(item.id)}
-              aria-expanded={activeId === item.id}
-            >
-              <span>{item.title}</span>
-              <span className="icon">{activeId === item.id ? '-' : '+'}</span>
-            </button>
+      <h2 className="accordion-title">FAQ {multi ? '(Multi-Open)' : '(Single-Open)'}</h2>
 
-            {activeId === item.id && (
-              <div className="accordion-content">
-                <p>{item.content}</p>
-              </div>
-            )}
-          </div>
-        ))}
+      <div className="accordion-list">
+        {data.map(item => {
+          const isOpen = openIds.includes(item.id)
+
+          return (
+            <div key={item.id} className="accordion-item">
+              <button
+                className={`accordion-header ${isOpen ? 'active' : ''}`}
+                onClick={() => toggle(item.id)}
+                aria-expanded={isOpen}
+              >
+                <span>{item.title}</span>
+                <span className="icon">{isOpen ? '-' : '+'}</span>
+              </button>
+
+              {isOpen && (
+                <div className="accordion-content">
+                  <p>{item.content}</p>
+                </div>
+              )}
+            </div>
+          )
+        })}
       </div>
     </div>
   )

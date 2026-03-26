@@ -6,6 +6,7 @@ export default function App() {
     <>
       {/* <SearchInput /> */}
       <Accordian />
+      <Accordian multi={true} />
     </>
   )
 }
