@@ -14,6 +14,9 @@ Practical React exercises and challenges:
 2. **Accordian:** [View code](./src/challenges/Accordion) | [Details](./src/challenges/Accordion/CHALLENGE.md) ~
    _Features Single vs. Multi-open modes._
 
+3. **Menu:** [View code](./src/challenges/Menu) | [Details](./src/challenges/Menu/CHALLENGE.md) ~
+   _Focus: Refs, Click-outside detection, and Keyboard accessibility (Escape key)._
+
 ---
 
 ## Tech Stack
