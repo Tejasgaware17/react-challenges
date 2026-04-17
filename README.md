@@ -17,6 +17,9 @@ Practical React exercises and challenges:
 3. **Menu:** [View code](./src/challenges/Menu) | [Details](./src/challenges/Menu/CHALLENGE.md) ~
    _Focus: Refs, Click-outside detection, and Keyboard accessibility (Escape key)._
 
+4. **Modal (Dialog):** [View code](./src/challenges/Modal) | [Details](./src/challenges//Modal/CHALLENGE.md) ~
+   _Focus: React Portals with Scroll Locking._
+
 ---
 
 ## Tech Stack
